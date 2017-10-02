@@ -1,2 +1,7 @@
-# websockets-playlist
-All the course files for the WebSockets playlist on The Net Ninja YouTube channel.
+# Anonymous Group Chat
+
+- Run npm install
+
+- Run node index
+
+- Browse `localhost:4000` in browser
