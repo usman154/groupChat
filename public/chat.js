@@ -1,5 +1,7 @@
 // Make connection
+ 
 var socket = io.connect('http://192.168.1.19:4000');
+ 
 
 // Query DOM
 var message = document.getElementById('message'),
