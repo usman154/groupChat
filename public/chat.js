@@ -1,7 +1,5 @@
 // Make connection
- 
-var socket = io.connect('http://192.168.1.19:4000');
- 
+var socket = io.connect('http://192.168.1.128:4000');
 
 // Query DOM
 var message = document.getElementById('message'),
@@ -25,8 +23,10 @@ message.addEventListener('keypress', function(){
 
 // Listen for events
 socket.on('chat', function(data){
+	var message = data.message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+	var handle = data.handle.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     feedback.innerHTML = '';
-    output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + handle + ': </strong>' + message + '</p>';
 });
 
 socket.on('typing', function(data){
