@@ -16,6 +16,15 @@ btn.addEventListener('click', function(){
     });
     message.value = "";
 });
+message.addEventListener('keydown', function(){
+	if (event.key === "Enter") {
+    socket.emit('chat', {
+        message: message.value,
+        handle: handle.value
+    });
+    message.value = "";
+	}
+});
 
 message.addEventListener('keypress', function(){
     socket.emit('typing', handle.value);

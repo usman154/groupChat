@@ -3,9 +3,10 @@ body{
 }
 
 h2{
+   background: orange;
     font-size: 18px;
     padding: 10px 20px;
-    color: #575ed8;
+    color: white;
 }
 
 #mario-chat{
@@ -36,7 +37,7 @@ h2{
 }
 
 #output strong{
-    color: #575ed8;
+    color: #f5820ca1;
 }
 
 label{
@@ -59,7 +60,7 @@ input{
 }
 
 button{
-    background: #575ed8;
+    background: orange;
     color: #fff;
     font-size: 18px;
     border: 0;
